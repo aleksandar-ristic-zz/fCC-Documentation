@@ -1,0 +1,23 @@
+@import 'config';
+@import 'utils';
+@import 'menu';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: $light-color;
+    display: flex;
+    flex-wrap: wrap;
+}
