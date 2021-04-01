@@ -1,0 +1,134 @@
+/* *** XL and LG screens *** */
+@media (max-width: 1400px) {
+
+    #navbar {
+        position: fixed;
+        background-color: rgba($main-color, .95);
+        z-index: 10;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+/* *** MD screens *** */
+@media (max-width: 980px) {
+    p {
+        max-width: 80%;
+    }
+
+    #getting-started {
+        img {
+           top: 10%; 
+        }
+    }
+}
+
+/* *** Tablets  *** */
+@media (max-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    p {
+        max-width: 90%;
+    }
+
+    #getting-started {
+        img {
+            top: 0;
+            left: 0;
+        }
+
+        button.btn-primary {
+            align-self: center;
+        }
+
+        .guide-container,
+        .card-container {
+            grid-template-columns: 1fr;
+            justify-items: start;
+        }
+    }
+
+    #collaboration {
+
+        .cloud-container {
+            img {
+                max-width: 100%;
+            }
+        }
+        
+    }
+
+    #billing {
+        .card-container {
+            grid-template-columns: 1fr;
+            justify-items: start;
+        }
+    }
+
+    footer {
+        .row.grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+
+            p {
+                max-width: 60%;
+            }
+        }
+
+        .row.flex {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            ul {
+                order: 1;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+/* *** Mobile Devices ** */
+@media (max-width: 500px) {
+    .container-main {
+        padding: 0 1rem;
+    }
+
+    p {
+        max-width: 95%;
+    }
+
+    #navbar {
+        background-color: transparent;
+        transform: translateX(-93%);
+
+        button.navbar-button {
+            color: $secondary-color;
+        }
+
+        &.open {
+            background-color: rgba($main-color, .98);
+
+            button.navbar-button {
+                color: $error-color;
+            }
+        }
+    }
+
+    #collaboration {
+        img {
+            width: 100%;
+        }
+    }
+}

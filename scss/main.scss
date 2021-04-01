@@ -176,7 +176,6 @@ code, pre {
         }
     }
     
-
     &.open {
         transform: translateX(0);
     }
@@ -191,6 +190,7 @@ code, pre {
         top: 2.4%;
         right: 1.4%;
         width: 20%;
+        animation: slideInFromBottom 1s ease-in;
     }
 
     .card-container {
@@ -203,6 +203,53 @@ code, pre {
                 max-width: 80%;
             }
         }
+    }
+
+    /* *** Beginning Animation *** */
+    .header-container {
+        h1 {
+            animation: slideInFromBottom 1s ease-in;
+        }
+        p {
+            animation: slideInFromLeft 1s ease-in;
+        }
+    }
+
+    button.btn-primary {
+        animation: slideInFromLeft 1.2s ease-in;
+    }
+
+    .guide-container {
+        ul:first-of-type {
+            animation: slideInFromBottom 1s ease-in;
+            animation-delay: .1s;
+
+             li {
+                 animation: slideInFromLeft 1s ease-in;
+             }
+
+             @for $x from 1 through 4 {
+                li:nth-child(#{$x}) {
+                    animation-delay: $x * .2s;
+                }
+            }
+         }
+
+
+         ul:last-of-type {
+            animation: slideInFromBottom 1s ease-in;
+            animation-delay: .1s;
+
+             li {
+                 animation: slideInFromRight 1s ease-in;
+             }
+
+             @for $x from 1 through 6 {
+                li:nth-child(#{$x}) {
+                    animation-delay: $x * .1s;
+                }
+            }
+         }
     }
 }
 
@@ -329,3 +376,5 @@ footer {
         }
     }
 }
+
+@import 'mobile';
