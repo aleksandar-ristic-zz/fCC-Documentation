@@ -12,7 +12,6 @@
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  margin: 10px;
 }
 
 .btn {
@@ -77,6 +76,10 @@
   color: aliceblue;
 }
 
+.text-gray {
+  color: #4d4d4d;
+}
+
 /* *** [Text Sizes] *** */
 .lead {
   font-size: 20px;
@@ -127,20 +130,26 @@
   color: aliceblue;
 }
 
+.alert-tip {
+  background-color: #d8ebfe;
+  border: 1px solid #047aed;
+}
+
+.alert-tip i {
+  color: aliceblue;
+}
+
 .flex {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100%;
+  justify-content: center;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  justify-items: center;
-  align-items: center;
-  height: 100%;
 }
 
 .grid-3 {
@@ -172,19 +181,19 @@
   padding: 1rem;
 }
 
-.p-1 {
+.p-2 {
   padding: 1.5rem;
 }
 
-.p-1 {
+.p-3 {
   padding: 2rem;
 }
 
-.p-1 {
+.p-4 {
   padding: 3rem;
 }
 
-.p-1 {
+.p-5 {
   padding: 4rem;
 }
 
@@ -213,19 +222,19 @@
   margin: 1rem;
 }
 
-.m-1 {
+.m-2 {
   margin: 1.5rem;
 }
 
-.m-1 {
+.m-3 {
   margin: 2rem;
 }
 
-.m-1 {
+.m-4 {
   margin: 3rem;
 }
 
-.m-1 {
+.m-5 {
   margin: 4rem;
 }
 
@@ -246,4 +255,213 @@ body {
   background: aliceblue;
   display: flex;
   flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #1087fb;
+}
+
+.left-container {
+  display: none;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  max-width: 60%;
+  line-height: 1.4;
+  color: #4d4d4d;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+code, pre {
+  padding: 1rem;
+  font-size: 1rem;
+  color: aliceblue;
+  background: #333;
+}
+
+.main-section {
+  position: relative;
+}
+
+.main-section::before {
+  content: '\f02f';
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #595959;
+}
+
+.main-section::before:hover {
+  color: #ff9100;
+}
+
+/* *** Navigation *** */
+#navbar {
+  position: relative;
+}
+
+#navbar button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: aliceblue;
+  font-size: 1.2rem;
+  border: 0;
+  background-color: transparent;
+  z-index: 5;
+}
+
+#navbar button:hover {
+  color: #d9534f;
+}
+
+/* *** Main-Docs *** */
+#getting-started {
+  position: relative;
+}
+
+#getting-started img {
+  position: absolute;
+  top: 2.4%;
+  right: 1.4%;
+  width: 20%;
+}
+
+#getting-started .card-container .card {
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+#getting-started .card-container .card p {
+  max-width: 80%;
+}
+
+/* *** Signup *** */
+#signup img {
+  align-self: center;
+}
+
+/* *** Organization *** */
+#organization img {
+  align-self: center;
+  width: 40%;
+}
+
+/* *** Archiving *** */
+#archiving pre {
+  margin: 1.5rem 0;
+}
+
+/* *** Collaboration *** */
+#collaboration img {
+  align-self: center;
+  width: 80%;
+}
+
+/* *** Languages *** */
+#languages .card-container.flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#languages .card-container.flex .card.flex {
+  align-items: center;
+  margin: 0 .2rem;
+}
+
+#languages .card-container.flex .card.flex img {
+  width: 100%;
+}
+
+/* *** Billing *** */
+#billing .card-container.grid {
+  justify-items: center;
+  align-items: center;
+}
+
+#billing .card-container.grid .card {
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#billing .card-container.grid .card ul {
+  list-style-type: circle;
+}
+
+#billing .card-container.grid .card ul li {
+  text-align: center;
+  margin: .5rem 0;
+}
+
+#billing .card-container.grid .card .price.flex {
+  align-items: center;
+}
+
+/* *** Footer *** */
+footer {
+  border-top: 1px solid #333;
+}
+
+footer .row.grid .flow {
+  max-height: 300px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+footer .row.grid .flow .thumbs {
+  flex-direction: row;
+  align-items: center;
+}
+
+footer .row.grid .flow .thumbs .up, footer .row.grid .flow .thumbs .down {
+  padding: .5rem;
+  border: 1px solid #047aed;
+}
+
+footer .row.grid .flow .thumbs .up {
+  margin-right: 1rem;
+}
+
+footer .row.flex {
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .row.flex ul {
+  flex-direction: row;
+}
+
+footer .row.flex ul > * {
+  margin-left: .2rem;
 }

@@ -1,6 +1,5 @@
 @import 'config';
 @import 'utils';
-@import 'menu';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 *,
@@ -20,4 +19,231 @@ body {
     background: $light-color;
     display: flex;
     flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: lighten($main-color, 5)
+    }
+}
+
+.left-container {
+    display: none;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    max-width: 60%;
+    line-height: 1.4;
+    color: lighten($dark-color, 10);
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
+code, pre {
+    padding: 1rem;
+    font-size: 1rem;
+    color: $light-color;
+    background: $dark-color;
+}
+
+.main-section {
+    position: relative;
+
+    &::before {
+        content: '\f02f';
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 1.2rem;
+        color: lighten($dark-color, 15);
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+/* *** Navigation *** */
+#navbar {
+    position: relative;
+
+    button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $light-color;
+        font-size: 1.2rem;
+        border: 0;
+        background-color: transparent;
+        z-index: 5;
+
+        &:hover {
+            color: $error-color;
+        }
+    }
+}
+
+/* *** Main-Docs *** */
+#getting-started {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 2.4%;
+        right: 1.4%;
+        width: 20%;
+    }
+
+    .card-container {
+        .card {
+
+            margin-bottom: 1rem;
+            align-items: center;
+
+            p {
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+/* *** Signup *** */
+#signup {
+    img {
+        align-self: center;
+    }
+}
+
+/* *** Organization *** */
+#organization {
+    img {
+        align-self: center;
+        width: 40%;
+    }
+}
+
+/* *** Archiving *** */
+#archiving {
+    pre {
+        margin: 1.5rem 0;
+    }
+}
+
+/* *** Collaboration *** */
+#collaboration {
+    img {
+        align-self: center;
+        width: 80%;
+    }
+}
+
+/* *** Languages *** */
+#languages {
+    .card-container.flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card.flex {
+            align-items: center;
+            margin: 0 .2rem;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* *** Billing *** */
+#billing {
+
+    .card-container.grid {
+        justify-items: center;
+        align-items: center;
+
+        .card {
+            margin-bottom: 1rem;
+            align-items: center;
+            justify-content: space-evenly;
+
+            ul {
+                list-style-type: circle;
+
+                li {
+                    text-align: center;
+                    margin: .5rem 0;
+                }
+            }
+
+            .price.flex {
+                align-items: center;
+            }
+        }
+    }
+}
+
+/* *** Footer *** */
+footer {
+    border-top: 1px solid $dark-color;
+
+    .row.grid {
+        .flow {
+            max-height: 300px;
+            align-items: center;
+            justify-content: flex-start;
+
+            .thumbs {
+                flex-direction: row;
+                align-items: center;
+
+                .up, .down {
+                    padding: .5rem;
+                    border: 1px solid $main-color;
+                }
+
+                .up {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .row.flex { 
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: space-between;  
+
+        ul {
+            flex-direction: row;
+
+            & > * {
+                margin-left: .2rem;
+            }
+        }
+    }
 }
