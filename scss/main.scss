@@ -39,10 +39,6 @@ a {
     }
 }
 
-.left-container {
-    display: none;
-}
-
 h1,
 h2 {
     font-weight: 700;
@@ -90,6 +86,9 @@ code, pre {
 /* *** Navigation *** */
 #navbar {
     position: relative;
+    overflow: auto;
+    transform: translateX(-90%);
+    @include easeIn;
 
     button {
         position: absolute;
@@ -104,6 +103,82 @@ code, pre {
         &:hover {
             color: $error-color;
         }
+    }
+
+    .nav-container {
+        position: relative;
+        @include easeIn;
+
+        h4 {
+            margin: .5rem 0;
+        }
+
+        h5 {
+            margin: .25rem 0;
+        }
+
+        .nav-link {
+            position: relative;
+
+            &:visited {
+                color: $secondary-color;
+            }
+
+            &::after {
+                content: '\f0da';
+                position: absolute;
+                top: 1.2rem;
+                right: .5rem;
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                color: $light-color;
+                @include easeIn;
+            }
+        }
+
+        .left-container {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            @include easeIn;
+            
+            a {
+                color: darken($light-color, 15);
+            }
+        }
+
+        &.open {
+
+            .left-container {
+                height: auto;
+                overflow: auto;
+                padding: .25rem .5rem .5rem;
+            }
+
+            .nav-link {
+
+                &::after {
+                    transform: rotateZ(90deg);
+                }
+            }
+        }
+    }
+
+    ul {
+        li:nth-of-type(6),
+        li:nth-of-type(8) {
+            transition: none;
+            .nav-link {
+                &::after {
+                    content: '';
+                }
+            }
+        }
+    }
+    
+
+    &.open {
+        transform: translateX(0);
     }
 }
 
@@ -120,9 +195,9 @@ code, pre {
 
     .card-container {
         .card {
-
             margin-bottom: 1rem;
             align-items: center;
+            @include easeIn;
 
             p {
                 max-width: 80%;
@@ -239,10 +314,17 @@ footer {
         justify-content: space-between;  
 
         ul {
+            margin-bottom: 0;
             flex-direction: row;
 
             & > * {
-                margin-left: .2rem;
+                margin-left: .5rem;
+            }
+
+            li {
+                a {
+                    font-size: 12px;
+                }
             }
         }
     }

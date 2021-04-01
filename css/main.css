@@ -12,6 +12,12 @@
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  transition: all .5s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 5px 10px rgba(51, 51, 51, 0.25);
 }
 
 .btn {
@@ -107,10 +113,13 @@
 
 /* *** [Alert] *** */
 .alert {
-  background: aliceblue;
+  margin: 15px 0;
   padding: 10px 20px;
   font-weight: bold;
-  margin: 15px 0;
+  background: aliceblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .alert i {
@@ -276,10 +285,6 @@ a:visited {
   color: #1087fb;
 }
 
-.left-container {
-  display: none;
-}
-
 h1,
 h2 {
   font-weight: 700;
@@ -327,6 +332,9 @@ code, pre {
 /* *** Navigation *** */
 #navbar {
   position: relative;
+  overflow: auto;
+  transform: translateX(-90%);
+  transition: all .5s ease-in;
 }
 
 #navbar button {
@@ -344,6 +352,73 @@ code, pre {
   color: #d9534f;
 }
 
+#navbar .nav-container {
+  position: relative;
+  transition: all .5s ease-in;
+}
+
+#navbar .nav-container h4 {
+  margin: .5rem 0;
+}
+
+#navbar .nav-container h5 {
+  margin: .25rem 0;
+}
+
+#navbar .nav-container .nav-link {
+  position: relative;
+}
+
+#navbar .nav-container .nav-link:visited {
+  color: #ff9100;
+}
+
+#navbar .nav-container .nav-link::after {
+  content: '\f0da';
+  position: absolute;
+  top: 1.2rem;
+  right: .5rem;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: aliceblue;
+  transition: all .5s ease-in;
+}
+
+#navbar .nav-container .left-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in;
+}
+
+#navbar .nav-container .left-container a {
+  color: #a4d4ff;
+}
+
+#navbar .nav-container.open .left-container {
+  height: auto;
+  overflow: auto;
+  padding: .25rem .5rem .5rem;
+}
+
+#navbar .nav-container.open .nav-link::after {
+  transform: rotateZ(90deg);
+}
+
+#navbar ul li:nth-of-type(6),
+#navbar ul li:nth-of-type(8) {
+  transition: none;
+}
+
+#navbar ul li:nth-of-type(6) .nav-link::after,
+#navbar ul li:nth-of-type(8) .nav-link::after {
+  content: '';
+}
+
+#navbar.open {
+  transform: translateX(0);
+}
+
 /* *** Main-Docs *** */
 #getting-started {
   position: relative;
@@ -359,6 +434,7 @@ code, pre {
 #getting-started .card-container .card {
   margin-bottom: 1rem;
   align-items: center;
+  transition: all .5s ease-in;
 }
 
 #getting-started .card-container .card p {
@@ -460,9 +536,14 @@ footer .row.flex {
 }
 
 footer .row.flex ul {
+  margin-bottom: 0;
   flex-direction: row;
 }
 
 footer .row.flex ul > * {
-  margin-left: .2rem;
+  margin-left: .5rem;
+}
+
+footer .row.flex ul li a {
+  font-size: 12px;
 }

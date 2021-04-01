@@ -4,3 +4,7 @@ $secondary-color: #ff9100;
 $dark-color: #333;
 $success-color: #5cb85c;
 $error-color: #d9534f;
+
+@mixin easeIn {
+    transition: all .5s ease-in;
+}

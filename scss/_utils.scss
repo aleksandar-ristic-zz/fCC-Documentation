@@ -11,6 +11,12 @@
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0, .2);
     padding: 20px;
+    @include easeIn;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 5px 5px 5px 10px rgba($dark-color, .25);
+    }
 }
 
 .btn {
@@ -102,10 +108,14 @@
 
 /* *** [Alert] *** */
 .alert {
-    background: $light-color;
+    margin: 15px 0;
     padding: 10px 20px;
     font-weight: bold;
-    margin: 15px 0;
+    background: $light-color;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
     i {
         background-color: $secondary-color;
