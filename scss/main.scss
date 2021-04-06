@@ -85,7 +85,9 @@ code, pre {
 
 /* *** Navigation *** */
 #navbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    height: 100%;
     overflow: auto;
     transform: translateX(-90%);
     @include easeIn;
