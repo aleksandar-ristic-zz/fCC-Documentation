@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <title>WizzHub | Docs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="dist/main.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -90,20 +90,22 @@
     </nav>
 <!-- Right side - Main Docs -->
     <main id="main-doc" class="container-main">
-        <section id="getting-started" class="main-section">
-            <div class="container">
-                <div class="header-container bg-primary p-1">
+        <section id="getting-started">
+            <div class="bg-primary">
+                 <div class="header-container p-1 container">
                     <img src="assets/docs.png" alt="docs">
-                    <p class="sm text-secondary">Product</p>
-                    <header><h1 class="xl">Getting Started</h1></header>
+                    <header><p class="sm text-secondary">Product</p><h1 class="xl">Getting Started</h1></header>
                     <p class="lead text-light">
                         Learn how to start building, shipping, and maintaining software with WizzHub. 
                         Explore our products, sign up for an account, 
                         and connect with the world's largest development community.
                     </p>
+
+                     <button class="btn btn-primary my-2">Quickstart</button>
                 </div>
+            </div>
                
-                <button class="btn btn-primary sm my-2">Quickstart</button>
+               <div class="container">
                 <div class="guide-container grid">
                    <ul>
                        <li><a href="#"><h4 class="md">Guides</h4></a></li>
@@ -167,8 +169,8 @@
             </div>
         </section>
 <!-- Quickstart -->
-        <section id="quickstart" class="main-section">
-            <div class="container">
+        <section id="quickstart">
+            <div class="container print-section">
                 <div class="header-container my-5">
                     <header><h2 class="lg">Quickstart</h2></header>
                     <h3 class="lead text-secondary">Get started with common tasks</h3>
@@ -209,8 +211,8 @@
             </div>
         </section>
 <!-- Learning -->
-        <section id="learning" class="main-section">
-            <div class="container">
+        <section id="learning">
+            <div class="container print-section">
                 <div class="header-container my-5">
                     <header><h2 class="lg py-2">Learning about WizzHub</h2></header>
                 </div>
@@ -245,20 +247,23 @@
                         </p>
                     </li>
                     <li><a href="#"><h5>FAQ about changes on WizzHub pages</h5></a>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ea similique, voluptatum quae mollitia voluptates!
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ea similique, voluptatum quae mollitia voluptates!
+                        </p>
                     </li>
                 </ul>
 
             </div>
         </section>
 <!-- Sign Up -->
-        <section id="signup" class="main-section">
-            <div class="container">
+        <section id="signup">
+            <div class="container print-section">
                 <div class="header-container my-5">
                     <header><h2 class="lg">Signin up for WizzHub</h2></header>
                     <h4 class="lead text-secondary">You can sign up for a free trial.</h4>
                 </div>
-                <div class="cloud-container p-1 bg-primary">
+            </div>
+            <div class="bg-primary">
+            <div class="cloud-container p-1 container">
                     <h3 class="md">About cloud trials</h3>
                     <p class="text-light">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusamus nesciunt numquam! Rerum vero incidunt 
@@ -273,8 +278,10 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, sunt natus? Dolore numquam veniam 
                         exercitationem suscipit ipsum impedit quas non?
                     </p>
+            </div>
+                
                 </div>
-                <div class="cloud-container">
+                <div class="cloud-container middle container">
                     <h3 class="md">Cloud pro account</h3>
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, numquam accusantium ipsa incidunt, iusto eligendi 
@@ -288,22 +295,24 @@
                 <div class="cloud-container bg-primary flex">
                     <img src="assets/cloud.png" alt="cloud">
                 </div>
-                <p class="alert alert-success">
+                <div class="container">
+                     <p class="alert alert-success">
                   <i class="fas fa-info"></i>  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 </p>
+                </div>    
             </div>
         </section>
 <!-- Organization -->
-        <section id="organization" class="main-section">
-            <div class="container">
-                <div class="header-container my-5">
+        <section id="organization">
+                <div class="header-container container print-section">
                     <header><h2 class="lg">Organization</h2></header>
                     <p class="lead">
                         Collaborate across many projects while managing access to projects and data and customizing 
                         settings for your organization.
                     </p>
                 </div>
-                <div class="cloud-container bg-dark p-1 flex">
+                <div class="bg-dark">
+                    <div class="cloud-container container p-1 flex">
                     <h3 class="md text-secondary">Remote</h3>
                     <p class="text-light">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis maxime voluptates, 
@@ -315,7 +324,9 @@
                         necessitatibus rem.
                     </p>
                 </div>
-                <div class="cloud-container flex">
+                </div>
+                
+                <div class="cloud-container container flex">
                     <h3 class="md text-secondary">Local</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga doloribus pariatur velit quaerat 
                         deleniti, nisi eum natus mollitia.
@@ -324,16 +335,18 @@
                       <i class="fas fa-info"></i>  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     </p>
                     <img src="assets/server2.png" alt="server">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequatur provident quibusdam voluptatum magni 
+                    <p>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae consequatur provident quibusdam voluptatum magni 
                     quisquam beatae magnam ex. Nisi tenetur unde tempora magni illum voluptas ipsa alias vero deserunt in.
+                    </p>     
                 </div>
             </div>
         </section>
 
 <!-- Archiving -->
-        <section id="archiving" class="main-section">
+        <section id="archiving">
             <div class="container">
-                <div class="header-container my-5">
+                <div class="header-container print-section my-5">
                     <header><h2 class="lg">Archiving</h2></header>
                     <h3 class="lead text-secondary">Can hold up to 3 years of data.</h3>
                 </div>
@@ -357,9 +370,9 @@
             </div>
         </section>
 <!-- Collaboration -->
-        <section id="collaboration" class="main-section">
+        <section id="collaboration">
             <div class="container">
-                <div class="header-container my-5">
+                <div class="header-container print-section my-5">
                     <header><h2 class="lg">Collaboration</h2></header>
                     <h3 class="text-secondary">For entire teams just install it through cli.</h3>
                 </div>
@@ -369,27 +382,30 @@
                     </p>
                     <img src="assets/cli.png" alt="cli">
                 </div>
-               <div class="cloud-container p-1 bg-primary flex">
+            </div>
+                <div class="bg-primary">
+                     <div class="cloud-container p-1 container flex">
                    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolor fuga 
                        voluptates vel quia maiores quam sint id, ut mollitia!
                     </p>
                     <img src="assets/npm.png" alt="npm">
                </div>
-               <div class="cloud-container">
+                </div>
+              
+                <div class="cloud-container container">
                     <h3 class="md">Requirements</h3>
                         <ul class="text-secondary lead">
                             <li>Windows 10, Mac OSX, Linux</li>
                             <li>Node.js v12 or higher</li>
                         </ul>
                     <h3 class="md">Install</h3>
-                    <p>Mac (Homebrew)</p>
+                    <p class="tech-name">Mac (Homebrew)</p>
                     <pre><code>$ brew install wizz-cli</code></pre>
-                    <p>NPM</p>
+                    <p class="tech-name">NPM</p>
                     <pre><code>$ npm install wizz-cli</code></pre>
-                    <p>Yarn</p>
+                    <p class="tech-name">Yarn</p>
                     <pre><code>$ yarn install wizz-cli</code></pre>
                 </div>   
-               </div>
         </section> 
 <!-- Languages -->
         <section id="languages">
@@ -433,16 +449,17 @@
             </div>
         </section>
 <!-- Billing -->
-        <section id="billing" class="main-section">
-            <div class="container">
+        <section id="billing">
+            <div class="container print-section">
                 <div class="header-container my-5">
                     <header><h2 class="lg">Billing</h2></header>
                     <h3 class="text-secondary">WizzHub offers free and pro services for every developer or team.</h3>
                 </div>
                 <div class="card-container grid grid-3">
                     <div class="card flex">
-                        <h3>Free</h3>
-                        <p>Basics</p>
+                        <div class="banner">Free</div>
+                        <h3>Basic</h3>
+                        <p>Starter Package</p>
                         <ul>
                             <li>unlimited collabs</li>
                             <li>500 services/month</li>
@@ -457,9 +474,10 @@
                             Free organization
                         </button>
                     </div>
-                    <div class="card flex">
-                        <h3 class="text-secondary">Normal</h3>
-                        <p class="text-grey">Standard</p>
+                    <div class="card flex standard">
+                        <div class="banner">Best Buy</div>
+                        <h3 class="text-secondary">Standard</h3>
+                        <p class="text-grey">Most Popular</p>
                         <ul>
                             <li>unlimited collabs</li>
                             <li>2500 services/month</li>
@@ -474,9 +492,10 @@
                             Continue with Team
                         </button>
                     </div>
-                    <div class="card flex">
-                        <h3 class="text-primary">PRO</h3>
-                        <p>Premium</p>
+                    <div class="card flex premium">
+                        <div class="banner">For Pros</div>
+                        <h3 class="text-primary">Premium</h3>
+                        <p>For Professionals</p>
                         <ul>
                             <li>unlimited collabs</li>
                             <li>10000 services/month</li>
@@ -498,7 +517,7 @@
         <footer class="my-2">
             <div class="container">
                 <div class="row grid grid-3">
-                    <div class="flow flex">
+                    <div class="flow flex thumb-container">
                         <h5>Did this doc help you</h5>
                         <a href="#">Privacy policy</a>
                         <div class="thumbs flex">
@@ -510,7 +529,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flow flex">
+                    <div class="flow flex great-container">
                         <h5>Help us make this docs great again!</h5>
                         <p>
                             All WizzHub docs are open source. See something that's wrong
@@ -519,7 +538,7 @@
                        
                            
                     </div>
-                    <div class="flow flex">
+                    <div class="flow flex contribute-container">
                         <h5>Still need help?</h5>
                         <div class="contribution">
                             Ask the WizzHub community

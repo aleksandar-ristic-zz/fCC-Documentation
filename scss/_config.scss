@@ -1,51 +1,50 @@
 $light-color: aliceblue;
 $main-color: #047aed;
+$main-color-l: #b4d9ff;
 $secondary-color: #ff9100;
+$secondary-color-l: #ffd298;
 $dark-color: #333;
 $success-color: #5cb85c;
 $error-color: #d9534f;
 
 @mixin easeIn {
-    transition: all .5s ease-in;
+	transition: all 0.3s ease-in;
 }
 
 /* *** [Animations] *** */
 @keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
+	0% {
+		transform: translateX(-100%);
+	}
 
-    100% {
-        transform: translateX(0);
-    }
+	100% {
+		transform: translateX(0);
+	}
 }
-
 @keyframes slideInFromRight {
-    0% {
-        transform: translateX(200%);
-    }
+	0% {
+		transform: translateX(200%);
+	}
 
-    100% {
-        transform: translateX(0);
-    }
+	100% {
+		transform: translateX(0);
+	}
 }
-
 @keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-    }
+	0% {
+		transform: translateY(-100%);
+	}
 
-    100% {
-        transform: translateY(0);
-    }
+	100% {
+		transform: translateY(0);
+	}
 }
-
 @keyframes slideInFromBottom {
-    0% {
-        transform: translateY(100%);
-    }
+	0% {
+		transform: translateY(100%);
+	}
 
-    100% {
-        transform: translateY(0);
-    }
+	100% {
+		transform: translateY(0);
+	}
 }
