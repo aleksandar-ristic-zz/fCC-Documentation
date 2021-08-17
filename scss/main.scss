@@ -54,6 +54,7 @@ img {
 }
 code,
 pre {
+	width: 100%;
 	padding: 1rem 0.65rem;
 	font-size: 1rem;
 	color: $light-color;
@@ -88,6 +89,14 @@ pre {
 	z-index: 10;
 	@include easeIn;
 
+	a {
+		&:visited,
+		&:active,
+		&:focus,
+		&:hover {
+			color: $light-color;
+		}
+	}
 	header {
 		padding-bottom: 1.5rem;
 	}
@@ -145,6 +154,10 @@ pre {
 
 			a {
 				color: darken($light-color, 15);
+
+				&:visited {
+					color: $light-color;
+				}
 			}
 		}
 
@@ -530,7 +543,7 @@ pre {
 /* *** Footer *** */
 footer {
 	border-top: 1px solid lighten($dark-color, 55);
-	padding: 3rem 0;
+	padding: 5rem 0 3rem;
 
 	.row.grid {
 		.flow {

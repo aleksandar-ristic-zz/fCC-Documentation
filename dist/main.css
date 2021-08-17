@@ -95,7 +95,6 @@
 .container {
   max-width: 1148px;
   margin: 0 auto;
-  padding: 0 24px;
 }
 
 .card {
@@ -443,6 +442,7 @@ img {
 
 code,
 pre {
+  width: 100%;
   padding: 1rem 0.65rem;
   font-size: 1rem;
   color: aliceblue;
@@ -481,6 +481,10 @@ pre {
   z-index: 10;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+#navbar a:visited, #navbar a:active, #navbar a:focus, #navbar a:hover {
+  color: aliceblue;
 }
 
 #navbar header {
@@ -546,6 +550,10 @@ pre {
 
 #navbar .nav-container .left-container a {
   color: #a4d4ff;
+}
+
+#navbar .nav-container .left-container a:visited {
+  color: aliceblue;
 }
 
 #navbar .nav-container.open .left-container {
@@ -1005,7 +1013,7 @@ pre {
 /* *** Footer *** */
 footer {
   border-top: 1px solid #bfbfbf;
-  padding: 3rem 0;
+  padding: 5rem 0 3rem;
 }
 
 footer .row.grid .flow {
@@ -1089,8 +1097,12 @@ footer .row.flex ul li a {
 
 /* *** XL and LG screens *** */
 @media (max-width: 1400px) {
+  .container,
+  #signup .cloud-container.middle {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
   #navbar {
-    position: fixed;
     background-color: rgba(4, 122, 237, 0.95);
     z-index: 10;
     padding-left: 4rem;
@@ -1098,10 +1110,21 @@ footer .row.flex ul li a {
   }
 }
 
+@media (max-width: 1200px) {
+  .container,
+  #signup .cloud-container.middle {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+}
+
 /* *** MD screens *** */
 @media (max-width: 980px) {
   p {
-    max-width: 80%;
+    max-width: 70%;
+  }
+  #getting-started h1 {
+    font-size: 4rem;
   }
   #getting-started img {
     top: 10%;
@@ -1141,7 +1164,7 @@ footer .row.flex ul li a {
   }
   #getting-started img {
     top: 0;
-    left: 0;
+    right: 0;
   }
   #getting-started button.btn-primary {
     -ms-flex-item-align: center;
@@ -1193,8 +1216,13 @@ footer .row.flex ul li a {
 
 /* *** Mobile Devices ** */
 @media (max-width: 500px) {
-  .container-main {
-    padding: 0 1rem;
+  .container,
+  #signup .cloud-container.middle {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  #getting-started h1 {
+    font-size: 3.5rem;
   }
   p {
     max-width: 95%;
