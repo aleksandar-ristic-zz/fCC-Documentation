@@ -25,13 +25,31 @@
 	p {
 		max-width: 70%;
 	}
-
 	#getting-started {
 		h1 {
 			font-size: 4rem;
 		}
 		img {
 			top: 10%;
+		}
+	}
+	#languages {
+		.card-container {
+			grid-template-columns: repeat(3, 1fr);
+
+			.card:last-child {
+				grid-column-end: 3;
+			}
+		}
+	}
+	#billing {
+		.card-container {
+			grid-template-columns: 1fr;
+			justify-items: start;
+
+			.card {
+				max-width: 30rem;
+			}
 		}
 	}
 }
@@ -42,7 +60,6 @@
 		display: flex;
 		flex-direction: column;
 	}
-
 	.header-container {
 		display: flex;
 		flex-direction: column;
@@ -50,28 +67,23 @@
 		align-items: center;
 		justify-content: center;
 	}
-
 	p {
 		max-width: 90%;
 	}
-
 	#getting-started {
 		img {
 			top: 0;
 			right: 0;
 		}
-
 		button.btn-primary {
 			align-self: center;
 		}
-
 		.guide-container,
 		.card-container {
 			grid-template-columns: 1fr;
 			justify-items: start;
 		}
 	}
-
 	#collaboration {
 		.cloud-container {
 			img {
@@ -79,14 +91,6 @@
 			}
 		}
 	}
-
-	#billing {
-		.card-container {
-			grid-template-columns: 1fr;
-			justify-items: start;
-		}
-	}
-
 	footer {
 		.row.grid {
 			grid-template-columns: 1fr;
@@ -127,15 +131,30 @@
 	}
 
 	#navbar {
+		top: auto;
+		bottom: 0;
+		width: 100%;
+		height: fit-content;
+		overflow-y: auto;
 		background-color: transparent;
 		transform: translateX(-93%);
+		box-shadow: 0 0 transparent;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
 
 		button.navbar-button {
 			color: $secondary-color;
+			top: auto;
+			right: 0.75rem;
+			bottom: 0.25rem;
+		}
+		header {
+			order: 2;
 		}
 
 		&.open {
-			background-color: rgba($main-color, 0.98);
+			background-color: rgba($main-color, 0.97);
 
 			button.navbar-button {
 				color: $error-color;

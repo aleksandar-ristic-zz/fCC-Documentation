@@ -894,24 +894,24 @@ pre {
 }
 
 /* *** Languages *** */
-#languages .card-container.flex {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+#languages .card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
 }
 
-#languages .card-container.flex .card.flex {
+#languages .card-container .card.flex {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: 0 0.2rem;
 }
 
-#languages .card-container.flex .card.flex img {
+#languages .card-container .card.flex img {
   width: 100%;
+  max-width: 5rem;
 }
 
 /* *** Billing *** */
@@ -1129,6 +1129,21 @@ footer .row.flex ul li a {
   #getting-started img {
     top: 10%;
   }
+  #languages .card-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  #languages .card-container .card:last-child {
+    grid-column-end: 3;
+  }
+  #billing .card-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: start;
+  }
+  #billing .card-container .card {
+    max-width: 30rem;
+  }
 }
 
 /* *** Tablets  *** */
@@ -1180,11 +1195,6 @@ footer .row.flex ul li a {
   #collaboration .cloud-container img {
     max-width: 100%;
   }
-  #billing .card-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    justify-items: start;
-  }
   footer .row.grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1228,15 +1238,42 @@ footer .row.flex ul li a {
     max-width: 95%;
   }
   #navbar {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-y: auto;
     background-color: transparent;
     -webkit-transform: translateX(-93%);
             transform: translateX(-93%);
+    -webkit-box-shadow: 0 0 transparent;
+            box-shadow: 0 0 transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #navbar button.navbar-button {
     color: #ff9100;
+    top: auto;
+    right: 0.75rem;
+    bottom: 0.25rem;
+  }
+  #navbar header {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   #navbar.open {
-    background-color: rgba(4, 122, 237, 0.98);
+    background-color: rgba(4, 122, 237, 0.97);
   }
   #navbar.open button.navbar-button {
     color: #d9534f;

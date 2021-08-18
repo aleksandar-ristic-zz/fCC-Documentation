@@ -444,9 +444,10 @@ pre {
 
 /* *** Languages *** */
 #languages {
-	.card-container.flex {
-		flex-direction: row;
-		flex-wrap: wrap;
+	.card-container {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		gap: 1rem;
 
 		.card.flex {
 			align-items: center;
@@ -454,6 +455,7 @@ pre {
 
 			img {
 				width: 100%;
+				max-width: 5rem;
 			}
 		}
 	}
